@@ -4,7 +4,7 @@
 <img align="right" src="https://github.com/n00b69/woa-enchilada/blob/main/enchilada.png" width="350" alt="Windows 11 running on enchilada">
 
 # Running Windows on the OnePlus 6
-[![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)]([https://t.me/WinOnOP6])
+[![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/WinOnOP6)
 
 ## ⚠️ Warning
 We're not responsible for bricked devices, missing recovery partitions, wiped IMEIs, dead cpus, any oneplus shenanigans, exploding batteries, dead cats or dogs, nuclear wars or you getting fired because you forgot to boot back in to android for the alarm.
