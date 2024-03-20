@@ -40,7 +40,7 @@ This project is in an early stage, all the files here have been contributed by o
 [<img alt="Icesito68" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/113939920?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/Icesito68)
 [<img alt="map220v" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/14368485?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/map220v)
 [<img alt="degdag" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/22778181?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/degdag)
-[<img alt="degdag" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/90069111?v=4" />](https://github.com/Daniel224455)
+[<img alt="Daniel224455" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/90069111?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/Daniel224455)
 [<img alt="halal-beef" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/78730004?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/halal-beef)
 [<img alt="Renegade Project" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/63859504?s=200&v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/edk2-porting)
 [<img alt="gus33000" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/3755345?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/gus33000)
