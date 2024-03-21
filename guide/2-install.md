@@ -13,6 +13,8 @@
 - [Drivers]() FILE NEEDED
   
 - [Msc script]() FILE NEEDED
+
+- [Parted](https://github.com/n00b69/woa-polaris/releases/download/Files/parted)
   
 - [TWRP]() FILE NEEDED (should already be installed)
 
@@ -35,6 +37,7 @@ adb push msc.sh / && adb shell sh msc.sh
 ```cmd
 diskpart
 ```
+
 #### Finding your phone
 > This will list all connected disks
 ```cmd
