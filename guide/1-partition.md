@@ -11,7 +11,7 @@
   
 - [TWRP]() FILE NEEDED
 
-- [Parted](https://github.com/n00b69/woapolaris/releases/download/Files/parted)
+- [Parted](https://github.com/n00b69/woa-polaris/releases/download/Files/parted)
 
 ### Notes
 > [!WARNING]  
