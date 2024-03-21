@@ -3,7 +3,7 @@
 
 <img align="right" src="https://github.com/Daniel224455/WoA-on-OnePlus6-Series/blob/main/enchilada.png" width="350" alt="Windows 11 running on enchilada">
 
-# Running Windows on the OnePlus 6
+# Running Windows on the OnePlus 6 / 6T
 [![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/WinOnOP6)
 
 ## ⚠️ Warning
