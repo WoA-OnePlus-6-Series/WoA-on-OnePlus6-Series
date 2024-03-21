@@ -9,9 +9,9 @@
 
 - [UEFI image]() FILE NEEDED
 
-- [WOA Helper app](https://github.com/n00b69/woaberyllium/releases/download/Dualboot/woahelper.apk)
+- [WOA Helper app](https://github.com/Daniel224455/WoA-on-OnePlus6-Series/releases/download/Dualboot/woahelper.apk)
 
-- [Switch To Android package]() FILE NEEDED
+- [Switch To Android package](https://github.com/Daniel224455/WoA-on-OnePlus6-Series/releases/download/Dualboot/enchilada-sta.zip)
 
 ## Dualboot guide
 
