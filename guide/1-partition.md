@@ -33,13 +33,14 @@
 fastboot flash recovery path\to\twrp.img reboot recovery
 ```
 
-> [!IMPORTANT]
-> If you do anything incorrectly, you may wipe your UFS and render your device unusable.
-
+#### Backing up important files
 Use TWRP now to back up your Modem and EFS partition (as well as anything else if you have important data). Move this backup to a safe place (e.g your PC) as the next steps will wipe your data.
 
+> [!warning]
+> **IF YOU PROCEED WITHOUT BACKING UP MODEM AND EFS, YOU ARE ON YOUR OWN IF YOU MESS UP**
+
 #### Partitioning guide
-> Your Xiaomi Mix 2s may have different storage sizes. This guide uses the values of the 128GB model as an example. When relevant, the guide will mention if other values can or should be used.
+> Your OnePlus 6 may have different storage sizes. This guide uses the values of the 128GB model as an example. When relevant, the guide will mention if other values can or should be used.
 
 #### Preparing for partitioning
 > Download the parted file and move it in the platform-tools folder, then run
@@ -86,12 +87,6 @@ mkpart win ntfs 32GB 122.5GB
 > Replace 122.5GB with the actual value you used when resizing the partition, then add 0.5 to this value and use it for the second value
 ```cmd
 mkpart esp fat32 122.5GB 123GB
-```
-
-#### Making ESP bootable
-> Replace $ with the actual number of the ESP partition which you can get using the `print` command, which should be 23
-```cmd
-set $ esp on
 ```
 
 #### Exit parted
