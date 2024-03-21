@@ -12,7 +12,7 @@
   
 - [Drivers]() FILE NEEDED
   
-- [Msc script](https://github.com/n00b69/woapolaris/releases/download/Files/msc.sh)
+- [Msc script]() FILE NEEDED
   
 - [TWRP]() FILE NEEDED (should already be installed)
 
@@ -35,48 +35,60 @@ adb push msc.sh / && adb shell sh msc.sh
 ```cmd
 diskpart
 ```
-
-#### List device volumes
+#### Finding your phone
+> This will list all connected disks
 ```cmd
-list volume
-```
-> If you don't see an unnamed NTFS and unnamed 500mb fat32 disk, go to TWRP, mount, Enable MTP, then run the command again
-
-#### Select Windows volume
-> Replace $ with the actual number of the Windows volume. It is the volume that has around the same size as you picked on the previous page
-```cmd
-select volume $
+lis dis
 ```
 
-#### Assign letter to Windows
+#### Selecting your phone
+> Replace $ with the actual number of your phone (its size should be around 128GB)
+```cmd
+sel dis $
+```
+
+#### Listing your phone's partitions
+> This will list your device's partitions
+```cmd
+lis par
+```
+
+#### Selecting the Windows partition
+> Replace $ with the partition number of Windows (should be 22)
+```cmd
+sel par $
+```
+
+#### Formatting Windows drive
+```cmd
+format quick fs=ntfs label="WIN"
+```
+
+#### Add letter to Windows
 ```cmd
 assign letter x
 ```
 
-#### Select ESP volume
-> Replace $ with the actual number of the ESP volume. It is the volumr that is around 500mb
+#### Selecting the ESP partition
+> Replace $ with the partition number of ESP (should be 23)
 ```cmd
-select volume $
+sel par $
 ```
 
-#### Assign letter to ESP
+#### Formatting ESP drive
+```cmd
+format quick fs=fat32 label="ESP"
+```
+
+#### Add letter to ESP
 ```cmd
 assign letter y
 ```
 
-### Exit diskpart
+#### Exit diskpart
 ```cmd
 exit
 ```
-#### Formatting Windows drive
-> In Windows Explorer (under My PC) locate the X: Windows drive
->
-> Right click and fast format it as NTFS
-
-#### Formatting ESP drive
-> In Windows Explorer (under My PC) locate the Y: ESP drive
-> 
-> Right click and fast format it as Fat32
 
 ### Installing Windows
 > Replace `<path\to\install.esd>` with the actual path of install.esd (it may also be named install.wim)
@@ -87,21 +99,29 @@ dism /apply-image /ImageFile:<path\to\install.esd> /index:6 /ApplyDir:X:\
 
 > If you get `Error 87`, check the index of your image with `dism /get-imageinfo /ImageFile:<path\to\install.esd>`, then replace `index:6` with the actual index number of Windows 11 Pro in your image
 
+#### Running parted
+```cmd
+adb push parted /cache/ && adb shell "chmod 755 /cache/parted" && adb shell /cache/parted /dev/block/sda
+```
+
+#### Making ESP bootable
+> Use `print` to see all partitions. Replace "$" with your ESP partition number, which should be 23
+```cmd
+set $ esp on
+```
+
 #### Installing Drivers
 > Extract the drivers folder from the archive, then run the following command, replacing`<path\to\drivers>` with the actual path of the drivers folder
 ```cmd
 dism /image:X:\ /add-driver /driver:<path\to\drivers> /recurse
 ```
 
-#### Fixing touch
-> Run the `touchfix.bat` file as an administrator, or touch will not work when you boot into Windows
-  
 #### Create Windows bootloader files
 ```cmd
 bcdboot X:\Windows /s Y: /f UEFI
 ```
 
-#### Configure bootloader files
+#### Enabling test signing
 ```cmd
 bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" testsigning on
 ```
@@ -123,7 +143,7 @@ diskpart
 ```
 
 #### Select the Windows volume of the phone
-> Use `lis vol` to find it, it's the one named "Windows"
+> Use `lis vol` to find it, it's the one named "WIN"
 ```diskpart
 select volume <number>
 ```
@@ -158,14 +178,8 @@ exit
 adb reboot recovery
 ```
 
-#### Checking panel type
-> This should output either `dsi_ebbg_fhd_ft8719_video_display` or `dsi_tianma_fhd_nt36672a_video_display`
-```cmd
-adb shell dmesg | grep dsi_display_bind
-```
-
 #### Push the UEFI to your phone
-Download the UEFI for your panel, then drag and drop it to your phone
+Download the UEFI, then drag and drop it to your phone
 
 #### Back up your Android boot image
 Use the TWRP backup feature to backup your Android boot image. Name this backup `Android`
