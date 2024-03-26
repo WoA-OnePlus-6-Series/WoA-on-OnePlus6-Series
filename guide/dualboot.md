@@ -7,7 +7,7 @@
 ### Prerequisites
 - [Magisk](https://github.com/topjohnwu/Magisk/releases/latest)
 
-- [UEFI image]() FILE NEEDED
+- [UEFI image](https://github.com/Daniel224455/WoA-on-OnePlus6-Series/releases/tag/UEFI)
 
 - [WOA Helper app](https://github.com/Daniel224455/WoA-on-OnePlus6-Series/releases/download/Dualboot/woahelper.apk)
 
