@@ -7,7 +7,7 @@
 ### Prerequisites
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
   
-- [Drivers]() FILE NEEDED
+- [Drivers](https://github.com/Daniel224455/WoA-on-OnePlus6-Series/releases/tag/Drivers)
   
 - [Msc script](https://github.com/n00b69/woa-beryllium/releases/download/Files/msc.sh)
   
