@@ -17,7 +17,7 @@ This project is in an early stage, all the files here have been contributed by o
 ## Get started
 - [Project status](guide/status.md)
 
-- [Installation instructions](guide/1-partition.md) W.I.P DO NOT USE
+- [Installation instructions](guide/1-partition.md)
 
 - [Troubleshooting](guide/troubleshooting.md)
 
@@ -27,9 +27,7 @@ This project is in an early stage, all the files here have been contributed by o
 
 - [Additional materials](guide/materials.md)
 
-- [Update drivers](guide/update.md) W.I.P DO NOT USE
-
-- [Reinstall instructions](guide/2-install.md) W.I.P DO NOT USE
+- [Update drivers](guide/update.md)
 
 - [Uninstall instructions](guide/uninstall.md) W.I.P DO NOT USE
 
