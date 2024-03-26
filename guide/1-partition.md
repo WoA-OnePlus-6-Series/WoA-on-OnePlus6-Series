@@ -4,8 +4,6 @@
 
 ## Partitioning your device
 
-## Partitioning your device
-
 ### Prerequisites
 - A brain (most important of all)
 
