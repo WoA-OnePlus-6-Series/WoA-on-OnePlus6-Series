@@ -7,7 +7,7 @@
 ### Prerequisites
 - [Windows on ARM image](https://worproject.com/esd)
   
-- [Drivers](https://github.com/Daniel224455/WoA-on-OnePlus6-Series/releases/tag/UEFI)
+- [Drivers](https://github.com/Daniel224455/WoA-on-OnePlus6-Series/releases/tag/Drivers)
   
 - [Msc script](https://github.com/n00b69/woa-beryllium/releases/download/Files/msc.sh)
   
