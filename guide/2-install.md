@@ -5,18 +5,13 @@
 ## Installing Windows
 
 ### Prerequisites
-
 - [Windows on ARM image](https://worproject.com/esd)
-  
-- [UEFI image]() FILE NEEDED
   
 - [Drivers]() FILE NEEDED
   
-- [Msc script]() FILE NEEDED
-
-- [Parted](https://github.com/n00b69/woa-polaris/releases/download/Files/parted)
+- [Msc script](https://github.com/n00b69/woa-beryllium/releases/download/Files/msc.sh)
   
-- [TWRP]() FILE NEEDED (should already be installed)
+- [TWRP]() (should already be installed) FILE NEEDED
 
 #### Boot to TWRP
 > If rebooting on the last page has replaced your recovery back to stock, flash it again in fastboot with:
@@ -45,7 +40,7 @@ lis dis
 ```
 
 #### Selecting your phone
-> Replace $ with the actual number of your phone (its size should be around 128GB)
+> Replace $ with the actual number of your phone (it should be the last one)
 ```cmd
 sel dis $
 ```
@@ -57,14 +52,14 @@ lis par
 ```
 
 #### Selecting the Windows partition
-> Replace $ with the partition number of Windows (should be 22)
+> Replace $ with the partition number of Windows (should be 19)
 ```cmd
 sel par $
 ```
 
 #### Formatting Windows drive
 ```cmd
-format quick fs=ntfs label="WIN"
+format quick fs=ntfs label="WINONEPLUS"
 ```
 
 #### Add letter to Windows
@@ -73,14 +68,14 @@ assign letter x
 ```
 
 #### Selecting the ESP partition
-> Replace $ with the partition number of ESP (should be 23)
+> Replace $ with the partition number of ESP (should be 18)
 ```cmd
 sel par $
 ```
 
 #### Formatting ESP drive
 ```cmd
-format quick fs=fat32 label="ESP"
+format quick fs=fat32 label="ESPONEPLUS"
 ```
 
 #### Add letter to ESP
@@ -93,32 +88,15 @@ assign letter y
 exit
 ```
 
-### Running parted
-```cmd
-adb push parted /cache/ && adb shell "chmod 755 /cache/parted" && adb shell /cache/parted /dev/block/sda
-```
-
-#### Making ESP bootable
-> Use `print` to see all partitions. Replace "$" with your ESP partition number, which should be 23
-```cmd
-set $ esp on
-```
-
-#### Exit parted
-```cmd
-quit
-```
-
 ### Installing Windows
 > Replace `<path\to\install.esd>` with the actual path of install.esd (it may also be named install.wim)
-
 ```cmd
 dism /apply-image /ImageFile:<path\to\install.esd> /index:6 /ApplyDir:X:\
 ```
 
 > If you get `Error 87`, check the index of your image with `dism /get-imageinfo /ImageFile:<path\to\install.esd>`, then replace `index:6` with the actual index number of Windows 11 Pro in your image
 
-#### Installing Drivers
+### Installing Drivers
 > Extract the drivers folder from the archive, then run the following command, replacing`<path\to\drivers>` with the actual path of the drivers folder
 ```cmd
 dism /image:X:\ /add-driver /driver:<path\to\drivers> /recurse
@@ -151,9 +129,9 @@ diskpart
 ```
 
 #### Select the Windows volume of the phone
-> Use `lis vol` to find it, it's the one named "WIN"
+> Use `list volume` to find it, replace "$" with the actual number of **WINONEPLUS**
 ```diskpart
-select volume <number>
+select volume $
 ```
 
 #### Unassign the letter X
@@ -162,9 +140,9 @@ remove letter x
 ```
 
 #### Select the ESP volume of the phone
-> Use `list volume` to find it, it's the one named "ESP"
+> Use `list volume` to find it, replace "$" with the actual number of **ESPONEPLUS**
 ```diskpart
-select volume <number>
+select volume $
 ```
 
 #### Unassign the letter Y
@@ -177,35 +155,8 @@ remove letter y
 exit
 ```
 
-### Backing up boot images and flashing UEFI
-
-#### Reboot your recovery
-> To remove the msc script
-- Reboot to recovery through TWRP, or run
-```cmd
-adb reboot recovery
-```
-
-#### Push the UEFI to your phone
-Download the UEFI, then drag and drop it to your phone
-
-#### Back up your Android boot image
-Use the TWRP backup feature to backup your Android boot image. Name this backup `Android`
-
-#### Flash the UEFI
-Use the TWRP install feature to flash the UEFI image to your boot partition. Select `install image`, then locate the image.
-
-#### Back up your Windows boot image
-Use the TWRP backup feature to backup your Windows boot image. Name this backup `Windows`
-
-#### Boot into Windows
-After having flashed the UEFI image, reboot your phone.
-
-### Setting up Windows
-> Your device will now set up Windows. This will take some time. It will eventually reboot, and after that the initial setup (oobe) should launch.
-
-> [!Note]
-> To skip the Microsoft Account login, use "g" for the email and password. Windows will then let you make a local account
+### Reboot to Android
+> To set up dualboot
 
 ## [Last step: Setting up dualboot](/guide/dualboot.md)
 
