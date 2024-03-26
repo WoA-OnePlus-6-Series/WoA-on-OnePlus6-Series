@@ -6,14 +6,12 @@
 
 ### Prerequisites
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
-
-- [UEFI image]() FILE NEEDED
   
 - [Drivers]() FILE NEEDED
   
-- [Msc script](https://github.com/n00b69/woapolaris/releases/download/Files/msc.sh)
+- [Msc script](https://github.com/n00b69/woa-beryllium/releases/download/Files/msc.sh)
   
-- [TWRP]() FILE NEEDED (should already be installed)
+- [TWRP]() (should already be installed) FILE NEEDED
 
 #### Boot to TWRP
 > If OnePlus has replaced your recovery back to stock, flash it again in fastboot with:
@@ -39,12 +37,12 @@ list volume
 ```
 
 #### Select Windows volume
-> Replace $ with the actual number of the Windows volume
+> Replace $ with the actual number of **WINONEPLUS**
 ```cmd
 select volume $
 ```
 
-#### Assign letter to Windows
+#### Assign letter to WINONEPLUS
 ```cmd
 assign letter x
 ```
@@ -60,9 +58,6 @@ exit
 dism /image:X:\ /add-driver /driver:<path\to\drivers> /recurse
 ```
 
-#### Fixing touch
-> Run the `touchfix.bat` file as an administrator, or touch will not work when you boot into Windows
-
 ### Unassign disk letter
 > So that it doesn't stay there after disconnecting the device
 ```cmd
@@ -70,9 +65,9 @@ diskpart
 ```
 
 #### Select the Windows volume of the phone
-> Use `lis vol` to find it, it's the one named "Windows"
+> Use `list volume` to find it, replace "$" with the actual number of **WINONEPLUS**
 ```diskpart
-select volume <number>
+select volume $
 ```
 
 #### Unassign the letter X
@@ -85,11 +80,13 @@ remove letter x
 exit
 ```
 
-##### Boot back into Windows
+#### Boot back into Windows
 > Reboot your device to boot back into Windows. If this boots you to Android, reflash the UEFI image through fastboot or by using the WOA Helper app
 
 
 ## Finished!
+
+
 
 
 
