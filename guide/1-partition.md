@@ -9,7 +9,7 @@
 
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
   
-- [TWRP]() FILE NEEDED
+- [Modded TWRP](https://github.com/Daniel224455/WoA-on-OnePlus6-Series/releases/tag/Recovery)
 
 - [Parted](https://github.com/n00b69/woa-beryllium/releases/download/Files/parted)
 
