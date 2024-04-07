@@ -11,12 +11,11 @@
   
 - [Msc script](https://github.com/n00b69/woa-beryllium/releases/download/Files/msc.sh)
   
-- [TWRP]() (should already be installed) FILE NEEDED
+- [Modded TWRP](https://github.com/Daniel224455/WoA-on-OnePlus6-Series/releases/tag/Recovery)
 
-#### Boot to TWRP
-> If rebooting on the last page has replaced your recovery back to stock, flash it again in fastboot with:
+### Boot to the modded TWRP
 ```cmd
-fastboot flash recovery path\to\twrp.img reboot recovery
+fastboot boot path\to\twrp.img
 ```
 
 #### Running the msc script
