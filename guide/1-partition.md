@@ -23,10 +23,10 @@
 >
 > YOU CAN BREAK YOUR DEVICE WITH THE COMMANDS BELOW IF YOU DO THEM WRONG!!!
 
-#### Flash TWRP recovery
+#### Boot the modded recovery
 > Open a CMD window inside the platform-tools folder, then (while your phone is in fastboot mode) run
 ```cmd
-fastboot flash recovery path\to\twrp.img reboot recovery
+fastboot boot path\to\twrp.img
 ```
 
 #### Backing up important files
