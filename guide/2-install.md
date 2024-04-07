@@ -9,7 +9,7 @@
   
 - [Drivers](https://github.com/Daniel224455/WoA-on-OnePlus6-Series/releases/tag/Drivers)
   
-- [Msc script](https://github.com/n00b69/woa-beryllium/releases/download/Files/msc.sh)
+- [Msc script](https://github.com/Daniel224455/WoA-on-OnePlus6-Series/releases/download/Files/MSC.sh)
   
 - [Modded TWRP](https://github.com/Daniel224455/WoA-on-OnePlus6-Series/releases/tag/Recovery)
 
@@ -19,7 +19,7 @@ fastboot boot path\to\twrp.img
 ```
 
 #### Running the msc script
-> Put msc.sh in the platform-tools folder, then run:
+> Put MSC.sh in the platform-tools folder, then run:
 ```cmd
 adb push msc.sh / && adb shell sh msc.sh
 ```
