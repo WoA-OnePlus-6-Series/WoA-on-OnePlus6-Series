@@ -25,7 +25,7 @@ adb push msc.sh / && adb shell sh msc.sh
 ```
 
 ### Diskpart
->  [!WARNING]
+> [!WARNING]
 > DO NOT ERASE ANY PARTITION WHILE IN DISKPART!!!! THIS WILL ERASE ALL OF YOUR UFS!!!! THIS MEANS THAT YOUR DEVICE WILL BE PERMANENTLY BRICKED WITH NO SOLUTION! (except for taking the device to Xiaomi or flashing it with EDL, both of which will likely cost money)
 
 ```cmd
@@ -99,6 +99,9 @@ dism /apply-image /ImageFile:<path\to\install.esd> /index:6 /ApplyDir:X:\
 > Unpack the driver archive, then open the `FirstBoot.cmd` file
 
 > If it asks you to enter a letter, enter the drive letter of **WINONEPLUS** (which should be X), then press enter
+
+> [!IMPORTANT]
+> After you finish installing the drivers, copy the drivers archive into the root of **WINONEPLUS** with Windows Explorer. After you boot into Windows for the first time, extract it, then open the `OnlineUpdater.cmd` file to update to the correct drivers.
 
 #### Create Windows bootloader files
 ```cmd
