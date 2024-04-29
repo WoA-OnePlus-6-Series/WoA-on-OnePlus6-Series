@@ -3,21 +3,20 @@
 # Running Windows on the OnePlus 6
 
 ## Project Status
-
 The project is in development. Expect some updates in the future.
 
 #### Features
-
-- [X] Audio 
+- [ ] Audio 
 - [X] Battery status
 - [x] Bluetooth
 - [x] Brightness 
 - [ ] Camera
-- [x] Cellular
+- [x] LTE
 - [x] Charging ```VERY slow```
 - [x] Display
 - [x] GPU  ```No x64 acceleration```
-- [x] Touchscreen 
+- [x] Touchscreen
+- [ ] SMS
 - [x] UFS
 - [x] USB
 - [x] Wi-Fi
@@ -31,10 +30,9 @@ The project is in development. Expect some updates in the future.
 - [x] Magnetometer
 - [ ] Proximity
 
-#### Security
 
-- [ ] Security Processor ```Impossible to get working, Xiaomi broke the firmware```
-- [ ] TPM (Software Backed)
+
+
 
 
 
