@@ -9,19 +9,20 @@
 
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
 
-- [TWRP]() FILE NEEDED
+- [TWRP](https://github.com/Daniel224455/WoA-on-OnePlus6-Series/releases/tag/Recovery)
 
-##### Boot TWRP
-> If your recovery has been replaced back to stock, flash it again in fastboot with:
+#### Boot the recovery
+> Open a CMD window inside the platform-tools folder, then (while your phone is in fastboot mode) run
 ```cmd
-fastboot flash recovery path\to\twrp.img reboot recovery
+fastboot boot path\to\twrp.img
 ```
-##### Backing up your boot image
+
+#### Backing up your boot image
 > Sometimes flashing Magisk can cause a bootloop. To fix this, you'll need to restore a boot.img backup.
 
 Use the TWRP backup feature to make a backup of the boot partition.
 
-##### Flashing Magisk
+#### Flashing Magisk
 - Flash the magisk.apk (you may have to rename it to magisk.zip) and reboot your phone. 
 - Once booted, locate the Magisk app and open it.
 - Follow any instructions provided. Select the direct install method if you are provided with several methods.
