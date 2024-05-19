@@ -9,20 +9,19 @@
   
 - [Drivers](https://github.com/Daniel224455/WoA-on-OnePlus6-Series/releases/tag/Drivers)
   
-- [Msc script](https://github.com/Daniel224455/WoA-on-OnePlus6-Series/releases/download/Files/MSC.sh)
-  
-- [Modded TWRP](https://github.com/Daniel224455/WoA-on-OnePlus6-Series/releases/tag/Recovery)
+- [UEFI image](https://github.com/Daniel224455/WoA-on-OnePlus6-Series/releases/tag/UEFI)
 
-### Boot to the modded TWRP
+### Boot to the UEFI
+> Replace **<path\to\devicename-uefi.img>** with the actual path of the UEFI image
 ```cmd
-fastboot boot path\to\twrp.img
+fastboot boot <path\to\devicename-uefi.img>
 ```
 
-#### Running the msc script
-> Put MSC.sh in the platform-tools folder, then run:
-```cmd
-adb push msc.sh / && adb shell sh msc.sh
-```
+#### Enabling mass storage mode
+> Once booted into the UEFI, use the volume buttons to navigate the menu and the power button to confirm
+- Select **UEFI Boot Menu**.
+- Select **USB Attached SCSI (UAS) Storage**.
+- Press the **power** button twice to confirm.
 
 ### Diskpart
 > [!WARNING]
