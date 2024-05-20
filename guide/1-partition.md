@@ -68,7 +68,7 @@ mkpart userdata ext4 6559MB 32GB
 #### Creating ESP partition
 > Replace **32GB** with the end value of **userdata**
 >
-> Replace **32GB** with the value you used before, adding **0.3GB** to it
+> Replace **32.3GB** with the value you used before, adding **0.3GB** to it
 ```cmd
 mkpart esp fat32 32GB 32.3GB
 ```
