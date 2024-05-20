@@ -11,8 +11,6 @@
   
 - [Modded TWRP](https://github.com/Daniel224455/WoA-on-OnePlus6-Series/releases/tag/Recovery)
 
-- [Parted](https://github.com/Daniel224455/WoA-on-OnePlus6-Series/releases/download/Files/parted)
-
 ### Notes
 > [!WARNING]  
 > 
@@ -43,9 +41,8 @@ cmd /c "for %i in (fsg,fsc,modemst1,modemst2) do (adb shell dd if=/dev/block/by-
 - Go to "Mount" in TWRP and unmount data, if it is mounted
 
 #### Preparing for partitioning
-> Download the parted file and move it in the platform-tools folder, then run
 ```cmd
-adb push parted /cache/ && adb shell "chmod 755 /cache/parted" && adb shell /cache/parted /dev/block/sda
+adb shell parted /dev/block/sda
 ```
 
 #### Printing the current partition table
