@@ -42,7 +42,8 @@ cmd /c "for %i in (fsg,fsc,modemst1,modemst2) do (adb shell dd if=/dev/block/by-
 
 #### Preparing for partitioning
 ```cmd
-adb shell parted /dev/block/sda
+adb shell 
+parted /dev/block/sda
 ```
 
 #### Printing the current partition table
