@@ -20,8 +20,18 @@
 >
 > YOU CAN BREAK YOUR DEVICE WITH THE COMMANDS BELOW IF YOU DO THEM WRONG!!!
 
+### Opening CMD as an admin
+> Download **platform-tools** and extract the folder somewhere, then open CMD as an **administrator**.
+>
+> It is recommended to keep this window open and use it throughout the entire guide.
+> 
+> Replace `path\to\platform-tools` with the actual path to the platform-tools folder, for example **C:\platform-tools**.
+```cmd
+cd path\to\platform-tools
+```
+
 #### Boot the modded recovery
-> Open a CMD window inside the platform-tools folder, then (while your phone is in fastboot mode) run
+> While in fastboot mode, replace `path\to\twrp.img` with the actual path of the image
 ```cmd
 fastboot boot path\to\twrp.img
 ```
@@ -99,7 +109,6 @@ quit
 
 #### Check if Android still starts
 - Just restart the phone, and see if Android still works
-
 
 ## [Next step: Installing Windows](/guide/2-install.md)
 
