@@ -157,6 +157,8 @@ remove letter y
 exit
 ```
 
+#### NEVER USE SLOT SWITCH IN UEFI! IT BRICKS YOUR PHONE
+
 ### Reboot to Android
 > To set up dualboot
 
