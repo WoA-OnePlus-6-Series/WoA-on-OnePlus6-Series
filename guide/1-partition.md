@@ -11,6 +11,8 @@
   
 - [Modded TWRP](https://github.com/Daniel224455/WoA-on-OnePlus6-Series/releases/tag/Recovery)
 
+### HELLO EDY FROM TIKTOK SAAR
+
 ### Notes
 > [!WARNING]  
 > 
