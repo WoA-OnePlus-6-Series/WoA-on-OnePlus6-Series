@@ -1,4 +1,4 @@
-<img align="right" src="https://github.com/Daniel224455/WoA-on-OnePlus6-Series/blob/main/enchilada.png" width="350" alt="Windows 11 running on fajita/enchilada">
+<img align="right" src="https://github.com/WoA-OnePlus-6-Series/WoA-on-OnePlus6-Series/blob/main/enchilada.png" width="350" alt="Windows 11 running on fajita/enchilada">
 
 # Running Windows on the OnePlus 6 / 6T
 
@@ -7,9 +7,9 @@
 ### Prerequisites
 - [Windows on ARM image](https://worproject.com/esd)
   
-- [Drivers](https://github.com/Daniel224455/WoA-on-OnePlus6-Series/releases/tag/Drivers)
+- [Drivers](https://github.com/WoA-OnePlus-6-Series/WoA-on-OnePlus6-Series/releases/tag/Drivers)
   
-- [UEFI image](https://github.com/Daniel224455/WoA-on-OnePlus6-Series/releases/tag/UEFI)
+- [UEFI image](https://github.com/WoA-OnePlus-6-Series/WoA-on-OnePlus6-Series/releases/tag/UEFI)
 
 ### Boot to the UEFI
 > Replace `path\to\devicename-uefi.img` with the actual path of the UEFI image
