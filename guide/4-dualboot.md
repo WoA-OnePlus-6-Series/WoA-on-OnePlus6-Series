@@ -1,4 +1,4 @@
-<img align="right" src="https://github.com/WoA-on-OnePlus6-Series/WoA-on-OnePlus6-Series/blob/main/enchilada.png" width="350" alt="Windows 11 running on enchilada">
+<img align="right" src="https://github.com/WoA-OnePlus-6-Series/WoA-on-OnePlus6-Series/blob/main/enchilada.png" width="350" alt="Windows 11 running on fajita/enchilada">
 
 # Running Windows on the OnePlus 6 / 6T
 
@@ -7,7 +7,7 @@
 ### Prerequisites
 - [Magisk](https://github.com/topjohnwu/Magisk/releases/latest)
 
-- [UEFI image](https://github.com/Daniel224455/WoA-on-OnePlus6-Series/releases/tag/UEFI)
+- [UEFI image](https://github.com/WoA-OnePlus-6-Series/WoA-on-OnePlus6-Series/releases/tag/UEFI)
 
 - [WOA Helper app](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA)
 
