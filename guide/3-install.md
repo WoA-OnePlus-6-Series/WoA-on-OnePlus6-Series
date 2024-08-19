@@ -30,53 +30,25 @@ fastboot boot path\to\devicename-uefi.img
 diskpart
 ```
 
-#### Finding your phone
-> This will list all connected disks
-```cmd
-lis dis
+#### Select the Windows volume of the phone
+> Use `list volume` to find it, replace `$` with the actual number of **WINONEPLUS**
+```diskpart
+select volume $
 ```
 
-#### Selecting your phone
-> Replace `$` with the actual number of your phone (it should be the last one)
-```cmd
-sel dis $
-```
-
-#### Listing your phone's partitions
-> This will list your device's partitions
-```cmd
-lis par
-```
-
-#### Selecting the Windows partition
-> Replace `$` with the partition number of Windows (should be 19)
-```cmd
-sel par $
-```
-
-#### Formatting Windows drive
-```cmd
-format quick fs=ntfs label="WINONEPLUS"
-```
-
-#### Add letter to Windows
-```cmd
+#### Assign the letter X
+```diskpart
 assign letter x
 ```
 
-#### Selecting the ESP partition
-> Replace `$` with the partition number of ESP (should be 18)
-```cmd
-sel par $
+#### Select the ESP volume of the phone
+> Use `list volume` to find it, replace `$` with the actual number of **ESPONEPLUS**
+```diskpart
+select volume $
 ```
 
-#### Formatting ESP drive
-```cmd
-format quick fs=fat32 label="ESPONEPLUS"
-```
-
-#### Add letter to ESP
-```cmd
+#### Assign the letter Y
+```diskpart
 assign letter y
 ```
 
@@ -98,7 +70,7 @@ dism /apply-image /ImageFile:path\to\install.esd /index:6 /ApplyDir:X:\
 > If you get `Error 87`, check the index of your image with `dism /get-imageinfo /ImageFile:path\to\install.esd`, then replace `index:6` with the actual index number of **Windows 11 Pro** in your image
 
 ### Copying your boot.img into Windows
-- Drag and drop the **root.img** from the **platform-tools** folder into the **WINONEPLUS** disk in Windows Explorer, then rename it to **boot.img**.
+- Drag and drop the **rooted_boot.img** from the **platform-tools** folder into the **WINONEPLUS** disk in Windows Explorer, then rename it to **boot.img**.
 
 ### Installing Drivers
 - Unpack the driver archive, then open the `OfflineUpdater.cmd` file (if an error shows up, run `OfflineUpdaterFix.cmd` instead)
