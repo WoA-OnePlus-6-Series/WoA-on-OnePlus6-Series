@@ -112,13 +112,22 @@ set $ esp on
 quit
 ```
 
-#### Formatting data
+### Formatting Windows drive
+```cmd
+adb shell mkfs.ntfs -f /dev/block/by-name/win -n WINONEPLUS
+``` 
+
+### Formatting ESP drive
+```cmd
+adb shell mkfs.fat -F32 -s1 /dev/block/by-name/esp -n ESPONEPLUS
+```
+
+### Formatting data
 - Format all data in TWRP, or Android will not boot.
 - ( Go to Wipe > Format data > type yes )
 
 #### Check if Android still starts
 - Just restart the phone, and see if Android still works
-
 
 ## [Next step: Rooting your phone](/guide/2-root.md)
 
