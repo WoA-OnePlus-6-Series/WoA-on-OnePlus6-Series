@@ -81,6 +81,7 @@ dism /apply-image /ImageFile:path\to\install.esd /index:6 /ApplyDir:X:\
 > After you finish installing the drivers, copy the drivers archive into the root of **WINONEPLUS** with Windows Explorer. After you boot into Windows for the first time, extract it, then open the `OnlineUpdater.cmd` file to update to the correct drivers.
 
 #### Create Windows bootloader files
+> If any error shows up, such as "Failure when initializing library system volume.", open `diskpart` again and assign any new letter to **ESPONEPLUS**, then replace the letter `Y` in the next commands with the letter that you just added.
 ```cmd
 bcdboot X:\Windows /s Y: /f UEFI
 ```
