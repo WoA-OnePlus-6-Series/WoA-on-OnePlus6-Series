@@ -16,7 +16,7 @@ The project is in development. Expect some updates in the future.
 - [x] Display
 - [x] GPU  ```No x64 acceleration```
 - [x] Touchscreen
-- [ ] SMS
+- [x] SMS ```SIM required```
 - [x] UFS
 - [x] USB
 - [x] Wi-Fi
