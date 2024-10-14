@@ -7,7 +7,7 @@
 ### Prerequisites
 - Unlocked bootloader
 
-- [OxygenOS 11 Firmware](https://placeholder.com)
+- [OxygenOS 11 Firmware](https://github.com/WoA-OnePlus-6-Series/WoA-on-OnePlus6-Series/blob/main/guide/oxygenos11.md)
 
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
 
