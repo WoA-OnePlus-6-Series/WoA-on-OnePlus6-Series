@@ -7,7 +7,11 @@
 ### Prerequisites
 - Unlocked bootloader
 
+- [OxygenOS 11 Firmware](https://placeholder.com)
+
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
+
+- [OnePlus USB Drivers](https://drive.google.com/file/d/1L7EZGx5mgeQYXO19Vsp9FWu9GXhF45Qs/view)
   
 - [Modded TWRP](https://github.com/WoA-OnePlus-6-Series/WoA-on-OnePlus6-Series/releases/tag/Recovery)
 
