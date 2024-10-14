@@ -1,4 +1,4 @@
-<img align="right" src="https://github.com/WoA-OnePlus-6-Series/WoA-on-OnePlus6-Series/blob/main/OP6xT.png" width="350" alt="Windows 11 running on a OnePlus 6 and 6T">
+<img align="right" src="https://github.com/WoA-OnePlus-6-Series/WoA-on-OnePlus6-Series/blob/main/OP6xT.png" width="500" alt="Windows 11 running on a OnePlus 6 and 6T">
 
 # Running Windows on the OnePlus 6 Series
 
