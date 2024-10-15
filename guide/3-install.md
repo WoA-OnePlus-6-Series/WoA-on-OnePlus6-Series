@@ -11,17 +11,19 @@
   
 - [UEFI image](https://github.com/WoA-OnePlus-6-Series/WoA-on-OnePlus6-Series/releases/tag/UEFI)
 
-### Boot to the UEFI
-> Replace `path\to\devicename-uefi.img` with the actual path of the UEFI image
+- [Modded TWRP](https://github.com/WoA-OnePlus-6-Series/WoA-on-OnePlus6-Series/releases/tag/Recovery)
+
+### Boot to TWRP
+> Replace `path\to\twrp-op6xt.img` with the actual path of the UEFI image
 ```cmd
-fastboot boot path\to\devicename-uefi.img
+fastboot boot path\to\twrp-op6xt.img
 ```
 
-#### Enabling mass storage mode
-> Once booted into the UEFI, use the volume buttons to navigate the menu and the power button to confirm
-- Select **UEFI Boot Menu**.
-- Select **USB Attached SCSI (UAS) Storage**.
-- Press the **power** button twice to confirm.
+#### Execute the msc script
+> If it asks you to run it once again, do so
+```cmd
+adb shell msc
+```
 
 ### Diskpart
 > [!WARNING]
