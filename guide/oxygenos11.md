@@ -23,18 +23,18 @@ To install OxygenOS 11, download the ZIP, then you sideload or push it with adb.
 ### Pushing with ADB (PC Required)
 First set your slot to B. Go to "Reboot" and tap on Slot B.
 Then, check if your device is available.
-´´´
+´´´cmd
 adb devices
 ´´´
 If any device is there, you can push the zip to your device.
- ´´´
+ ´´´cmd
  adb push path/to/oxygenos11.zip /sdcard
 ´´´
 After this, go to main menu of TWRP and go to "Install". Tap on the ZIP and flash it
 
 ### Sideloading (PC Required)
 Boot TWRP, Set slot to B, then go to "Advanced" and click on "ADB Sideload". The device should be in ADB now.
-´´´
+´´´cmd
 adb sideload path/to/oxygenos11.zip
 ´´´
 
