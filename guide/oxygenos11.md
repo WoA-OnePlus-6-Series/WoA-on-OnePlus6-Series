@@ -40,10 +40,15 @@ adb sideload path/to/oxygenos11.zip
 
 ### Installing without a PC
 Download the correct OxygenOS ZIP for your device. Place it in /sdcard.
+
 Reboot to recovery.
+
 After that, go to "Reboot" menu and choose Slot B.
+
 Go back to the main menu.
-Go to "Install" and go to /sdcard. There should be your OxygenOS Zip.
+
+Go to "Install" and go to /sdcard. There should be your OxygenOS ZIP.
+
 Flash the ZIP and reboot your device.
 
 
