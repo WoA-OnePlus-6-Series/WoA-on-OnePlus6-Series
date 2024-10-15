@@ -7,6 +7,8 @@
 ### Prerequisites
 - A rooted OnePlus 6 or 6T
 
+- [OxygenOS 11 Firmware](https://github.com/WoA-OnePlus-6-Series/WoA-on-OnePlus6-Series/blob/main/guide/oxygenos11.md)
+
 - [OP6xT WOAInstaller](https://github.com/WoA-OnePlus-6-Series/OP6xT-WOAInstaller/releases/tag/OP6xT)
 
 - [Windows on ARM image](https://arkt-7.github.io/woawin/)
