@@ -34,6 +34,11 @@
 cd path\to\platform-tools
 ```
 
+> [!IMPORTANT]
+> Make sure you use the MODDED Recovery throughout this whole tutorial as we provide tools to help aid this installation process and make it as easy as possible for you.
+> 
+> If you don't use it and you face any errors, consider it your fault and consider yourself alone if you try asking for support as you have deferred from the main guide.
+
 #### Boot the modded recovery
 > While in fastboot mode, replace `path\to\twrp.img` with the actual path of the image
 ```cmd
@@ -57,82 +62,20 @@ adb pull /dev/block/by-name/boot_a boot.img
 ```
 
 ### Partitioning guide
-> Your OnePlus 6 may have different storage sizes. This guide uses the values of the 128GB model as an example. When relevant, the guide will mention if other values can or should be used.
+> If you have a 64GB OnePlus 6 or 6T, please contact us in our [Telegram Group](https://t.me/WinOnOP6)
 
-#### Unmount data
+### Run the partitioning script
+> Replace **$** with the amount of storage you want Windows to have (do not add GB, just write the number)
+> 
+> If it asks you to run it once again, do so
 ```cmd
-adb shell umount /dev/block/by-name/userdata
+adb shell partition $
 ```
-
-#### Preparing for partitioning
-```cmd
-adb shell parted /dev/block/sda
-```
-
-#### Printing the current partition table
-> Parted will print the list of partitions, userdata should be the last partition in the list.
-```cmd
-print
-```
-
-#### Removing userdata
-> Replace **$** with the number of the **userdata** partition, which should be **17**
-```cmd
-rm $
-```
-
-#### Recreating userdata
-> Replace **6559MB** with the former start value of **userdata** which we just deleted (it is probably 6599MB)
->
-> Replace **32GB** with the end value you want **userdata** to have
-```cmd
-mkpart userdata ext4 6559MB 32GB
-```
-
-#### Creating ESP partition
-> Replace **32GB** with the end value of **userdata**
->
-> Replace **32.3GB** with the value you used before, adding **0.3GB** to it
-```cmd
-mkpart esp fat32 32GB 32.3GB
-```
-
-#### Creating Windows partition
-> Replace **32.3GB** with the end value of **esp**
->
-> Replace **125GB** with the end value of your disk, use `p free` to find it
-```cmd
-mkpart win ntfs 32.3GB 125GB
-```
-
-#### Making ESP bootable
-> Use `print` to see all partitions. Replace "$" with your ESP partition number, which should be 18
-```cmd
-set $ esp on
-```
-
-#### Exit parted
-```cmd
-quit
-```
-
-### Formatting Windows drive
-> [!note]
-> If this command and the next one fails (for example: "Failed to access `/dev/block/by-name/win`: No such file or directory"), reboot your phone, then boot back into the recovery provided in the guide and try again
-```cmd
-adb shell mkfs.ntfs -f /dev/block/by-name/win -L WINONEPLUS
-``` 
-
-### Formatting ESP drive
-```cmd
-adb shell mkfs.fat -F32 -s1 /dev/block/by-name/esp -n ESPONEPLUS
-```
-
 ### Formatting data
 - Format all data in TWRP, or Android will not boot.
 - ( Go to Wipe > Format data > type yes )
 
-#### Check if Android still starts
+### Check if Android still starts
 - Just restart the phone, and see if Android still works
 
 ## [Next step: Rooting your phone](/guide/2-root.md)
