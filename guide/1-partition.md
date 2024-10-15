@@ -61,8 +61,7 @@ cmd /c "for %i in (fsg,fsc,modemst1,modemst2) do (adb shell dd if=/dev/block/by-
 adb pull /dev/block/by-name/boot_a boot.img
 ```
 
-### Partitioning guide
-> If you have a 64GB OnePlus 6 or 6T, please contact us in our [Telegram Group](https://t.me/WinOnOP6)
+# Partitioning
 
 ### Run the partitioning script
 > Replace **$** with the amount of storage you want Windows to have (do not add GB, just write the number)
