@@ -17,8 +17,7 @@
 - [OnePlus 6T](https://oxygenos.oneplus.net/OnePlus6TOxygen_34.J.62_OTA_0620_all_2111252336_f6eda340d7af4e3e.zip)
 - [OnePlus 6](https://oxygenos.oneplus.net/OnePlus6Oxygen_22.J.62_OTA_0620_all_2111252336_287bcb1636d743d3.zip)
 
-## Installation
-To install OxygenOS 11, download the ZIP, then you sideload or push it with adb.
+# Installation
 
 ### Pushing with ADB (PC Required)
 First set your slot to B. Go to "Reboot" and tap on Slot B.
