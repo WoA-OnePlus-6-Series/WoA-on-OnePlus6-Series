@@ -1,7 +1,7 @@
 <img align="right" src="https://github.com/WoA-OnePlus-6-Series/WoA-on-OnePlus6-Series/blob/main/OP6xT.png" width="500" alt="Windows 11 running on fajita/enchilada">
 
 # Running Windows on the OnePlus 6 / 6T
-[![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/WoAonOp6)
+[![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/WinOnOP6)
 
 ## ⚠️ Warning
 We're not responsible for bricked devices, broken fastboot, wiped IMEIs, dead cpus, any oneplus shenanigans, exploding batteries, dead cats or dogs, nuclear wars or you getting fired because you forgot to boot back in to android for the alarm.
