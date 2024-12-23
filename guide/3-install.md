@@ -13,8 +13,8 @@
 
 - [Modded TWRP](https://github.com/WoA-OnePlus-6-Series/WoA-on-OnePlus6-Series/releases/tag/Recovery)
 
-### Boot to TWRP
-> Replace `path\to\twrp-op6xt.img` with the actual path of the UEFI image
+### Boot into TWRP
+> Replace `path\to\twrp-op6xt.img` with the actual path of the TWRP image
 ```cmd
 fastboot boot path\to\twrp-op6xt.img
 ```
@@ -126,6 +126,10 @@ fastboot boot path\to\devicename-uefi.img
 Your device should reboot by itself after +- 10 minutes of waiting, after which you will be booted into Android, for the last step.
 
 ## [Last step: Setting up dualboot](/guide/4-dualboot.md)
+
+
+
+
 
 
 
