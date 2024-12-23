@@ -4,42 +4,33 @@
 
 ## Uninstallation
 
-### Why is this needed?
-If you want to uninstall windows this is used instead of deleting partitions manually to avoid human error + writing a whole dedicated guide to just uninstalling.
-
-If you want to relock your bootloader you'll need your partition table to be stock.
-
 ### Prerequisites
-
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
   
-- [gpt_both0.bin]() FILE NEEDED
+- [Modded TWRP](https://github.com/WoA-OnePlus-6-Series/WoA-on-OnePlus6-Series/releases/tag/Recovery)
 
-### Uninstall instructions
-> [!Important]
-> This guide will likely not work, it needs to be updated
+### Switch to Android
+> Or your device will not boot into Android after uninstalling Windows
+- Run the **Switch to Android** or **Android** shortcut on your desktop, or flash a **boot.img** backup in fastboot/recovery.
 
-#### Boot into fastboot mode
-> Hold the volume down + power button while the phone is turned off, or run the following command while it is booted
+### Boot the modified recovery
+> While in fastboot mode, replace `path\to\twrp.img` with the actual path of the image
 ```cmd
-adb reboot bootloader
+fastboot boot path\to\twrp.img
 ```
 
-#### Restore GPT
-> Replace ```path\to\gpt_both0.bin``` with the path to the gpt_both0.bin file.
-
+### Execute the restore script
 ```cmd
-fastboot flash partition:0 path\to\gpt_both0.bin
+adb shell restore
 ```
-
-#### Erase userdata to avoid a bootloop and restore FS size
-```cmd
-fastboot -w
-```
-> [!Note]
-> If erasing userdata fails, reboot to recovery and wipe all data there instead
 
 ## Finished!
+
+
+
+
+
+
 
 
 
