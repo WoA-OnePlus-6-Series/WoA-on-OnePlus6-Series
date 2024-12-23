@@ -39,6 +39,9 @@ cd path\to\platform-tools
 > 
 > If you don't use it and you face any errors, consider it your fault and consider yourself alone if you try asking for support as you have deferred from the main guide.
 
+> [!Note]
+> If your device is not detected in fastboot or recovery mode, you'll have to install USB drivers [using this guide](troubleshooting.md#device-is-not-recognized-in-fastboot-or-recovery)
+
 #### Boot the modded recovery
 > While in fastboot mode, replace `path\to\twrp.img` with the actual path of the image
 ```cmd
@@ -58,10 +61,96 @@ cmd /c "for %i in (fsg,fsc,modemst1,modemst2) do (adb shell dd if=/dev/block/by-
 #### Backing up your boot image
 > This will back up your boot image in the current directory
 ```cmd
-adb pull /dev/block/by-name/boot_a boot.img
+adb pull /dev/block/by-name/boot$(getprop ro.boot.slot_suffix) boot.img
 ```
 
-# Partitioning
+### Partitioning your device
+> There are two methods to partition your device. Please select the method you would like to use below. 
+
+#### Method 1: Manual partitioning 
+
+<details>
+  <summary><strong>Click here for method 1</strong></summary> 
+
+#### Unmount data
+> Ignore any possible errors and continue
+```cmd
+adb shell umount /dev/block/by-name/userdata
+``` 
+
+#### Preparing for partitioning
+```cmd
+adb shell parted /dev/block/sda
+``` 
+
+#### Printing the current partition table
+> Parted will print the list of partitions, userdata should be the last partition in the list
+```cmd
+print
+``` 
+
+#### Removing userdata
+> Replace **$** with the number of the **userdata** partition, which should be **17**
+```cmd
+rm $
+``` 
+
+#### Recreating userdata
+> Replace **6559MB** with the former start value of **userdata** which we just deleted
+>
+> Replace **40GB** with the end value you want **userdata** to have. In this example your available usable space in Android will be 40GB-6559MB = **33GB**
+```cmd
+mkpart userdata ext4 6559MB 40GB
+``` 
+
+#### Creating ESP partition
+> Replace **40GB** with the end value of **userdata**
+>
+> Replace **40.3GB** with the value you used before, adding **0.3GB** to it
+```cmd
+mkpart esp fat32 40GB 40.3GB
+``` 
+
+#### Creating Windows partition
+> Replace **40.3GB** with the end value of **esp**
+```cmd
+mkpart win ntfs 40.3GB -0MB
+``` 
+
+#### Making ESP bootable
+> Use `print` to see all partitions. Replace "$" with your ESP partition number, which should be **18**
+```cmd
+set $ esp on
+``` 
+
+#### Exit parted
+```cmd
+quit
+``` 
+
+### Formatting data
+- Format all data in TWRP, or Android will not boot.
+- ( Go to Wipe > Format data > type yes ) 
+
+#### Check if Android still starts
+- Just restart the phone, and see if Android still works 
+
+### Formatting Windows and ESP drives
+> Reboot into the modded recovery, then run the below two commands
+```cmd
+adb shell mkfs.ntfs -f /dev/block/by-name/win -L WINONEPLUS
+``` 
+
+```cmd
+adb shell mkfs.fat -F32 -s1 /dev/block/by-name/esp -n ESPONEPLUS
+``` 
+
+</details>
+
+#### Method 2: Automatic partitioning 
+
+<details>
+  <summary><strong>Click here for method 2</strong></summary> 
 
 ### Run the partitioning script
 > Replace **$** with the amount of storage you want Windows to have (do not add GB, just write the number)
@@ -69,15 +158,35 @@ adb pull /dev/block/by-name/boot_a boot.img
 > If it asks you to run it once again, do so
 ```cmd
 adb shell partition $
-```
-### Formatting data
-- Format all data in TWRP, or Android will not boot.
-- ( Go to Wipe > Format data > type yes )
+``` 
 
 ### Check if Android still starts
-- Just restart the phone, and see if Android still works
+- Just restart the phone, and see if Android still works 
+
+</details>
 
 ## [Next step: Rooting your phone](/guide/2-root.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
 
 
 
