@@ -61,7 +61,7 @@ cmd /c "for %i in (fsg,fsc,modemst1,modemst2) do (adb shell dd if=/dev/block/by-
 #### Backing up your boot image
 > This will back up your boot image in the current directory
 ```cmd
-adb pull /dev/block/by-name/boot$(getprop ro.boot.slot_suffix) boot.img
+adb pull /dev/block/by-name/boot_a boot.img
 ```
 
 ### Partitioning your device
@@ -72,16 +72,19 @@ adb pull /dev/block/by-name/boot$(getprop ro.boot.slot_suffix) boot.img
 <details>
   <summary><strong>Click here for method 1</strong></summary> 
 
-#### Unmount data
-> Ignore any possible errors and continue
+#### Opening a shell
 ```cmd
-adb shell umount /dev/block/by-name/userdata
-``` 
+adb shell
+```
 
-#### Preparing for partitioning
+### Preparing for partitioning
+$${\color{lightblue}🟦 Note}$$
+> If at any moment in parted you see an error prompting you to type "Yes/No" or "Ignore/Cancel", type `Yes` or `Ignore` depending on the situation to ignore the errors and continue.
+>
+> If you see any **udevadm** errors, you can ignore these as well.
 ```cmd
-adb shell parted /dev/block/sda
-``` 
+parted /dev/block/sda
+```
 
 #### Printing the current partition table
 > Parted will print the list of partitions, userdata should be the last partition in the list
@@ -166,28 +169,6 @@ adb shell partition $
 </details>
 
 ## [Next step: Rooting your phone](/guide/2-root.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
 
 
 
