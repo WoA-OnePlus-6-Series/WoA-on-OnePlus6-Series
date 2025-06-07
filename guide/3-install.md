@@ -5,13 +5,13 @@
 ## Installing Windows
 
 ### Prerequisites
+- [Modded TWRP](https://github.com/WoA-OnePlus-6-Series/WoA-on-OnePlus6-Series/releases/tag/Recovery)
+
 - [Windows on ARM image](https://arkt-7.github.io/woawin/)
   
 - [Drivers](https://github.com/WoA-OnePlus-6-Series/WoA-on-OnePlus6-Series/releases/tag/Drivers)
   
 - [UEFI image](https://github.com/WoA-OnePlus-6-Series/WoA-on-OnePlus6-Series/releases/tag/UEFI)
-
-- [Modded TWRP](https://github.com/WoA-OnePlus-6-Series/WoA-on-OnePlus6-Series/releases/tag/Recovery)
 
 ### Boot into TWRP
 > Replace `path\to\twrp-op6xt.img` with the actual path of the TWRP image
@@ -24,6 +24,9 @@ fastboot boot path\to\twrp-op6xt.img
 ```cmd
 adb shell msc
 ```
+
+> [!Note]
+> If you are facing issues (e.g your device does not enter mass storage mode), follow [the steps described in this guide](/guide/troubleshooting.md#mass-storage-mode-does-not-work) for alternative ways of entering mass storage mode.
 
 ### Diskpart
 > [!WARNING]
@@ -126,11 +129,6 @@ fastboot boot path\to\devicename-uefi.img
 Your device should reboot by itself after +- 10 minutes of waiting, after which you will be booted into Android, for the last step.
 
 ## [Last step: Setting up dualboot](/guide/4-dualboot.md)
-
-
-
-
-
 
 
 
