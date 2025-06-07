@@ -14,7 +14,7 @@ This project is in an early stage, all the files here have been contributed by o
 ## Get started
 - [Project status](guide/status.md)
 
-- [Installation instructions](guide/installation-selection.md)
+- [Installation instructions](guide/1-partition.md)
 
 - [Troubleshooting](guide/troubleshooting.md)
 
@@ -26,12 +26,15 @@ This project is in an early stage, all the files here have been contributed by o
 
 - [Update drivers](guide/update.md)
 
+- [Reinstall instructions](guide/reinstall.md)
+
 - [Uninstall instructions](guide/uninstall.md)
 
 
 # Maintainers
+[<img alt="Project Aloha" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/118143494?s=200&v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/Project-Aloha)
+[<img alt="Arminas" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/72100724?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/arminask)
 [<img alt="Daniel224455" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/90069111?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/Daniel224455)
-
 
 ## Contributors
 [<img alt="adomerlee" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/109386069?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/adomerlee)
